@@ -5,26 +5,26 @@
     <title>HTML Academy: Техномарт</title>
   </head>
   <body>
-    <header class="main-header">
-        <div class="header-logo">
-            <img src="img/logo.png" alt="ТЕХНОМАРТ">
-        </div>
-        <div class="site-navigation">
-            <a class="btn-search" href="#">Поиск:</a>
-            <a class="btn-bookmarks" href="#">Закладки:</a>
-            <a class="btn-basket" href="#">Корзина:</a>
-            <a class="btn-order" href="#">Оформить заказ</a>
-        </div>
+    <header class="main-header">        
+        <nav class="site-navigation">
+            <a class="header-logo">
+                <img src="img/logo.png" alt="Логотип интернет-магазин строительных материалов и инстументов для ремонта  «Техномарт»">
+            </a>
+            <ul  class="site-navigation">
+                <li><a class="btn-search" href="#">Поиск:</a></li>
+                <li><a class="btn-bookmarks" href="#">Закладки:</a></li>
+                <li><a class="btn-basket" href="#">Корзина:</a></li>
+                <li><a class="btn-order" href="#">Оформить заказ</a></li>
+            </ul>
+            <ul class="user-navigation">
+                <li><a class="login-link" href="login.html">Войти</a></li>
+                <li><a class="btn-registration" href="#">Регистрация</a></li>
+            </ul>                 
+        </nav>
         <div class="coordinate">
             <h1>Интернет-магазин строительных материалов и инстументов для ремонта</h1>
             <p>+7(812)555-05-55</p>
             <p>г. Санкт-Петербург, ул. Б Конюшенная, д. 19/8</p>
-        </div>
-        <div class="cabinet">
-            <ul>
-                <li><a class="btn-login" href="#">Войти</a></li>
-                <li><a class="btn-registration" href="#">Регистрация</a></li>
-            </ul>                 
         </div>
         <nav class="main-navigation">
             <ul>
@@ -38,6 +38,7 @@
             </ul>
         </nav>
     </header>
+      
     <main class="container">
         <section class="assortment">
             <div class="assortment-tem">
@@ -101,7 +102,7 @@
             <ul>
                 <li><img src="img/bosch.jpg" width="126" height="37" alt="BOSCH"></li>
                 <li><img src="img/Makita.jpg" width="123" height="40" alt="makita"></li>
-                <li><img src="img/DeWALT.jpg" width="146" height="44" alt="DeWALT"></li>
+                <li><img src="img/dewalt.jpg" width="146" height="44" alt="dewalt"></li>
                 <li><img src="img/interscol.jpg" width="200" height="88" alt="ИНТЕРКОЛ"></li>
                 <li><img src="img/Hitachi.jpg" width="169" height="31" alt="HITACHI"></li>
                 <li><img src="img/LG.jpg" width="121" height="73" alt="LG"></li>
@@ -187,5 +188,37 @@
             </div>
         </div>
     </footer>
+      
+    <section class="modal modal-login">
+        <h2>Личный кабинет</h2>
+        <p>Введите свой логин и пароль.</p>
+        <form class="login-form" action="http://echo.htmlacademy.ru" method="post">
+            <p>
+                <label class="visually-hidden" for="user-login">Логин</label>
+                <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Логин">
+            </p>
+            <p>
+                <label class="visually-hidden" for="user-password">Пароль</label>
+                <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
+            </p>
+            <p class="login-password-info">                
+                <label class="login-checkbox">
+                    <input type="checkbox" name="remember">
+                    Запомните меня
+                </label>
+                <a class="restore" href="#">Я забыл пароль!</a>
+            </p>
+            <button class="button" type="submit">Войти</button>
+        </form>
+        <button class="modal-close" type="button">Закрыть</button>
+    </section>
+    
+    <section class="modal modal-map">
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <p>
+            <img src="img/map.jpg" width="300" height="158" alt="Офис компани по адресу ул. Б Конюшенная 19/8, Санкт-Петербург">
+        </p>
+        <button class="modal-close" type="button">Закрыть</button>
+    </section>
   </body>
 </html>

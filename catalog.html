@@ -39,30 +39,67 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <div class="breadcrumps">
-            <a href="#">КАТАЛОГ</a> <a href="#">ИНСРУМЕНТ</a> <a href="#">ПЕРФОРАТОРЫ</a>
-        </div>
-        <section class="perphorators">
-            <h2>ПЕРФОРАТОРЫ</h2>
-            <div>
-                <p>ФИЛЬТР</p>
-                <h3>ЦЕНА</h3>
-                <h3>>ПРОИЗВОДИТЕЛИ:</h3>
-                <ul>
-                    <li><a class="btn-box" href="#">BOSCH</a></li>
-                    <li><a class="btn-box" href="#">ИНТЕРКОЛ</a></li>
-                    <li><a class="btn-box" href="#">MAKITA</a></li>
-                    <li><a class="btn-box" href="#">DEWALT</a></li>
-                    <li><a class="btn-box" href="#">HITACHI</a></li>
-                </ul>
-                <h3>>ПИТАНИЕ:</h3>
-                <ul>
-                    <li><a class="btn-radio" href="#">АККУМУЛЯТОРНЫЕ</a></li>
-                    <li><a class="btn-radio" href="#">СЕТЕВЫЕ</a></li>                    
-                </ul>
-                <button class="tovar">ПОКАЗАТЬ</button>
-            </div>
+      
+    <main class="container">        
+        
+        <ul class="breadcrumbs">
+            <li><a href="index.html">ГЛАВНАЯ</a></li>
+            <li><a href="#">КАТАЛОГ</a></li>
+            <li><a href="#">ИНСРУМЕНТ</a></li>
+            <li class="breadcrumbs-current">ПЕРФОРАТОРЫ</li>
+        </ul>
+        
+        <h1 class="page-title">ПЕРФОРАТОРЫ</h1>
+        
+        <section class="filters">                       
+            <h2>ФИЛЬТР:</h2>                                    
+            <form class="visually-hidden" action="http://echo.htmlacademy.ru" method="get" oninput="priceoutput.value=pricecounst.value">
+                <fieldset>
+                    <legend>ЦЕНА:</legend>
+                    <input type="range" id="pricecounst" name="pricecounst" min="0" max="50000" step="10">
+                    <p>0 - <output name="priceoutput"></output></p>
+                </fieldset>                
+                <fieldset>
+                    <legend>ПРОИЗВОДИТЕЛИ:</legend>                    
+                    <ul>
+                        <li class="filter-option">
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="bosch" id="filter-bosch" checked>
+                            <label for="filter-bosch">BOSCH</label>
+                        </li>
+                        <li class="filter-option">
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="interscol" id="filter-interscol">
+                            <label for="filter-interscol">ИНТЕРКОЛ</label>
+                        </li>
+                        <li class="filter-option">
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="makita" id="filter-makita" checked>
+                            <label for="filter-makita">MAKITA</label>
+                        </li>
+                        <li class="filter-option">
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="dewalt" id="filter-dewalt">
+                            <label for="filter-dewalt">DEWALT</label>
+                        </li>
+                        <li class="filter-option">
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hitachi" id="filter-hitachi" checked>
+                            <label for="filter-hitachi">HITACHI</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>ПИТАНИЕ:</legend>
+                    <ul>
+                        <li class="filter-option">
+                            <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="rechargeable" id="filter-rechargeable" checked>
+                            <label for="filter-rechargeable">АККУМУЛЯТОРНЫЕ</label>
+                        </li>
+                        <li class="filter-option">
+                            <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="networked" id="filter-networked">
+                            <label for="filter-networked">СЕТЕВЫЕ</label>
+                        </li>                    
+                    </ul>
+                </fieldset>
+                <button type="submit" class="filter-button button">Показать</button>
+            </form>                                                                             
+                
             <div class="sort">
                 <p>СОРТИРОВКА</p>
                 <ul>
@@ -71,6 +108,7 @@
                     <li><a href="#">ПО ФУНКЦИОНАЛУ</a></li>
                 </ul>
             </div>
+            
             <div class="product">
                 <img src="img/BFG3000.jpg" width="180" height="160" alt="Перфоратор BOSCH BFG 3000">
                 <h3>Перфоратор BOSCH BFG 3000</h3>
@@ -170,5 +208,29 @@
             </div>
         </div>
     </footer>
+    
+    <section class="modal modal-login">
+        <h2>Личный кабинет</h2>
+        <p>Введите свой логин и пароль.</p>
+        <form class="login-form" action="http://echo.htmlacademy.ru" method="post">
+            <p>
+                <label class="visually-hidden" for="user-login">Логин</label>
+                <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Логин">
+            </p>
+            <p>
+                <label class="visually-hidden" for="user-password">Пароль</label>
+                <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
+            </p>
+            <p class="login-password-info">                
+                <label class="login-checkbox">
+                    <input type="checkbox" name="remember">
+                    Запомните меня
+                </label>
+                <a class="restore" href="#">Я забыл пароль!</a>
+            </p>
+            <button class="button" type="submit">Войти</button>
+        </form>
+        <button class="modal-close" type="button">Закрыть</button>
+    </section>
   </body>
 </html>
