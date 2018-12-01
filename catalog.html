@@ -3,50 +3,53 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
-        <div class="header-logo">
-            <img src="img/logo.png" alt="ТЕХНОМАРТ">
-        </div>
-        <div class="site-navigation">
-            <a class="btn-search" href="#">Поиск:</a>
-            <a class="btn-bookmarks" href="#">Закладки:</a>
-            <a class="btn-basket" href="#">Корзина:</a>
-            <a class="btn-order" href="#">Оформить заказ</a>
-        </div>
-        <div class="coordinate">
-            <h1>Интернет-магазин строительных материалов и инстументов для ремонта</h1>
-            <p>+7(812)555-05-55</p>
-            <p>г. Санкт-Петербург, ул. Б Конюшенная, д. 19/8</p>
-        </div>
-        <div class="cabinet">
-            <a class="btn" href="#">Равшан Джамшутович</a>
-            <ul>
+        <nav class="main-navigation">
+            <a class="logo">
+                <img src="img/logo.png" width="220" height="51" alt="Логотип интернет-магазин строительных материалов и инстументов для ремонта  «Техномарт»">
+                ТЕХНОМАРТ
+            </a>
+            <ul class="site-navigation">
+                <li><a class="btn-search" href="#">Поиск:</a></li>
+                <li><a class="btn-bookmarks" href="#">Закладки:</a></li>
+                <li><a class="btn-basket" href="#">Корзина:</a></li>
+                <li><a class="btn-order" href="#">Оформить заказ</a></li>
+            </ul>                                                                                  
+            <ul class="user-navigation">
+                <li><a class="btn" href="#">Равшан Джамшутович</a></li>
                 <li><a class="btn" href="#">Мои заказы</a></li>
                 <li><a class="btn" href="#">Личный кабинет</a></li>
-            </ul>                 
-        </div>
-        <nav class="main-navigation">
-            <ul>
-                <li><a href="#">Главная</a></li>
+            </ul>                              
+            <ul class="shop-navigation">
+                <li><a href="index.html">Главная</a></li>
                 <li><a href="#">Компания</a></li>
-                <li><a href="#">Каталог</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
                 <li><a href="#">Новости</a></li>
                 <li><a href="#">Спецпредложения</a></li>
                 <li><a href="#">Доставка</a></li>
                 <li><a href="#">Контакты</a></li>
             </ul>
         </nav>
+        <div class="coordinate">
+            <h1>Интернет-магазин строительных материалов и инстументов для ремонта</h1>
+            <p>+7(812)555-05-55</p>
+            г. Санкт-Петербург, ул. Б Конюшенная, д. 19/8
+        </div>
     </header>
       
     <main class="container">        
         
         <ul class="breadcrumbs">
-            <li><a href="index.html">ГЛАВНАЯ</a></li>
-            <li><a href="#">КАТАЛОГ</a></li>
-            <li><a href="#">ИНСРУМЕНТ</a></li>
-            <li class="breadcrumbs-current">ПЕРФОРАТОРЫ</li>
+            <li><a href="index.html"><img src="img/icon-home.svg"></a></li>
+            <li><a href="catalog.html"><img src="img/icon-right-small.svg">КАТАЛОГ</a></li>
+            <li><a href="#"><img src="img/icon-right-small.svg">ИНСРУМЕНТ</a></li>
+            <li class="breadcrumbs-current"><img src="img/icon-right-small.svg">ПЕРФОРАТОРЫ</li>
         </ul>
         
         <h1 class="page-title">ПЕРФОРАТОРЫ</h1>
@@ -61,7 +64,7 @@
                 </fieldset>                
                 <fieldset>
                     <legend>ПРОИЗВОДИТЕЛИ:</legend>                    
-                    <ul>
+                    <ul class="box-filter">
                         <li class="filter-option">
                             <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="bosch" id="filter-bosch" checked>
                             <label for="filter-bosch">BOSCH</label>
@@ -86,7 +89,7 @@
                 </fieldset>
                 <fieldset>
                     <legend>ПИТАНИЕ:</legend>
-                    <ul>
+                    <ul class="radio-filter">
                         <li class="filter-option">
                             <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="rechargeable" id="filter-rechargeable" checked>
                             <label for="filter-rechargeable">АККУМУЛЯТОРНЫЕ</label>
@@ -102,7 +105,7 @@
                 
             <div class="sort">
                 <p>СОРТИРОВКА</p>
-                <ul>
+                <ul class="sort-filter">
                     <li><a href="#">ПО ЦЕНЕ</a></li>
                     <li><a href="#">ПО ТИПУ</a></li>
                     <li><a href="#">ПО ФУНКЦИОНАЛУ</a></li>
@@ -175,11 +178,12 @@
     </main>
       
     <footer class="main-footer">
-        <div class="footer-logo">
-            <img src="img/logo.png" alt="ТЕХНОМАРТ">
-        </div>
+        <a class="logo">
+            <img src="img/logo.png" width="220" height="51" alt="Логотип интернет-магазин строительных материалов и инстументов для ремонта  «Техномарт»">
+            ТЕНОМАРТ
+        </a>
         <nav class="footer-navigation">
-            <ul class="footer-nav">                
+            <ul class="shop-navigation">                
                 <li><a href="#">Компания</a></li>
                 <li><a href="catalog.html">Каталог</a></li>
                 <li><a href="#">Новости</a></li>                
@@ -201,10 +205,16 @@
             <a class="social-btn" href="https://facebook.com/htmlacademy">Фейсбук</a>
             <a class="social-btn" href="https://instagram.com/htmlacademy">Инстаграм</a>
             <div class="obratna-svaz">
-                <p>Обратная связь:<br> mail@htmlacademy.ru</p>
+                <p>
+                    Обратная связь:<br>
+                    <a href="maito:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+                </p>
             </div>
             <div class="autor">
-                <p>Разработано -- <br><a href="htmlacademy.ru">htmlacademy.ru</a></p>
+                <p>
+                    Разработано -- <br>
+                    <a href="htmlacademy.ru">htmlacademy.ru</a>
+                </p>
             </div>
         </div>
     </footer>

@@ -4,7 +4,7 @@ body {
 
   font-family: 'Cuprum', sans-serif;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 18px;
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
@@ -13,15 +13,224 @@ body {
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
+    color: #ffffff;
 }
 
-.main-navigation {
-  font-size: 14px;
-  line-height: 20px;
-  color: #f4f4f4;
+.main-navigation,
+.footer-social {
+    background-color: #293449;
+    list-style: none;       
+}
 
-  background-color: #32425c;
+.logo {
+    font-size: 24px;
+    line-height: 24px;
+    color: #ffffff;
+}
+
+.site-navigation,
+.user-navigation,
+.shop-navigation,
+.manufacturer,
+.menu-service,
+.menu-company,
+.category-nav,
+.box-filter,
+.radio-filter {    
+    list-style: none; 
+    font-size: 17px;
+    line-height: 18px;
+}
+
+.user-navigation {
+    background-color: #f4f7f9;     
+}
+
+.user-navigation a,
+.breadcrumbs a {
+    color: #000000;
+}
+
+.shop-navigation,
+.main-footer {    
+  background-color: #32425c;      
+}
+
+.coordinate {
+    font-size: 10px;
+    line-height: 15px;  
+    list-style: none;
+}
+
+.coordinate h1 {
+    font-size: 16px;
+    line-height: 23px;
+    font-style: italic;
+    color: red;
+}
+
+.coordinate p {
+    font-size: 18px;
+    line-height: 23px;
+    color: red;
+}
+
+.breadcrumbs,
+.filters h2,
+.sort {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 13px;
+    line-height: 16px;
+    list-style: none;
+    color: #000000;
+}
+
+.sort {
+    background-color: #f7f3ec;
+    color: #000000;
+}
+
+.sort a {
+    color: #000000;
+}
+
+.sort a:active {
+    color: red;
+}
+
+.sort-filter {    
+    list-style: none; 
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.assortment,
+.assortment a, 
+.popular-product a {
+    color: #ffffff;
+}
+
+.assortment h3 {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.assortment-materials {
+    background-color: #ffbf47;
+}
+
+.assortment-instruments {
+    background-color: #38bce3;
+}
+
+.assortment-equipment {
+    background-color: #dc91d8;
+}
+
+.assortment-discounts {
+    background-color: #8ed78f;
+}
+
+.assortment-delivery {
+    background-color: #ffc047;
+}
+
+.perforator {
+    display: none;
+}
+
+.perforator h3,
+.drel h3 {
+    font-size: 36px;
+    line-height: 36px;
+}
+
+.perforator p,
+.drel p {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.btn-canalog {
+    box-sizing: border-box;
+    background: url("../img/slider-btn.png") no-repeat #ffffff;
+    width: 195px;
+    height: 38px;  
+    font-size: 14px;
+    line-height: 38px;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.btn-popular {
+    box-sizing: border-box;
+    background: url("../img/all_tovar.png") no-repeat #ffffff;
+    width: 253px;
+    height: 38px;  
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.product {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 17px;
+    line-height: 18px;
+    font-weight: 700;  
+    text-transform: uppercase;
+}
+
+.product h3 {
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.product p {    
+    color: #a9a9a9;
+}
+
+.btn-product {
+    box-sizing: border-box;
+    background: url("../img/red-button.svg") no-repeat #ffffff;
+    width: 141px;
+    height: 38px;      
+}
+
+.menu-service {
+    background-color: #32425c;
+    font-size: 21px;
+    line-height: 30px;
+}
+
+.service h3 {
+    font-size: 36px;
+    line-height: 36px;
+    color: #32425c;
+}
+
+.service p,
+.menu-company {
+    font-size: 13px;
+    line-height: 24px;   
+}
+
+.guarantee,
+.credit {
+    display: none;
+}
+
+.main-footer {
+    font-size: 18px;
+    line-height: 24px;
+    color: #ffffff; 
+}
+
+.category-nav,
+.footer-social a {
+    color: #ffd180;
 }
 
 .modal {
