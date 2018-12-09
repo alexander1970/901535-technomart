@@ -13,7 +13,7 @@
         <nav class="main-navigation">            
             <ul class="site-navigation">
                 <li><div class="logo">ТЕХНОМАРТ</div></li>
-                <li><a class="btn-search" href="#">Поиск:</a></li>
+                <li><a class="btn-search" href="#"><img src="img/icon-search.svg">Поиск:</a></li>
                 <li><a class="btn-bookmarks" href="#"><img src="img/icon-bookmark.svg">Закладки: 0</a></li>
                 <li><a class="btn-basket" href="#"><img src="img/icon-cart.svg">Корзина: 0</a></li>
                 <li><a class="btn-order" href="#">Оформить заказ</a></li>
@@ -21,7 +21,10 @@
             <div class="coordinate">                
                 <h1>Интернет-магазин строительных материалов и инстументов для ремонта</h1>
                 <div class="adress">
-                    <p>+7(812)555-05-55</p>
+                    <div class="tel">
+                        <img src="img/icon-phone.svg">
+                        +7(812)555-05-55
+                    </div>
                     г. Санкт-Петербург, ул. Б Конюшенная, д. 19/8 
                 </div>                
                 <ul class="user-navigation">
@@ -44,21 +47,19 @@
     <main class="container">
         
         <section class="assortment">
-            <div class="tovar">
-                <div class="assortment-materials">
-                    <div class="flag flag-new">новинка</div>  
-                    <h3>Материалы</h3>
-                    <a class="btn-assortment" href="#">НА ЛЮБОЙ ВКУС</a>       
-                </div>         
-                <div class="assortment-instruments">
-                    <h3>Инструменты</h3>
-                    <a class="btn-assortment" href="#">НА ВСЕ СЛУЧАИ</a>
-                </div>
-                <div class="assortment-equipment">
-                    <h3>Техника</h3>
-                    <a class="btn-assortment" href="#">ДЛЯ СТРОЙКИ</a>
-                </div>
+            <div class="assortment-materials">
+                <div class="flag flag-new">новинка</div>  
+                <h3>Материалы</h3>
+                <a class="btn-assortment" href="#">НА ЛЮБОЙ ВКУС</a>       
+            </div>         
+            <div class="assortment-instruments">
+                <h3>Инструменты</h3>
+                <a class="btn-assortment" href="#">НА ВСЕ СЛУЧАИ</a>
             </div>
+            <div class="assortment-equipment">
+                <h3>Техника</h3>
+                <a class="btn-assortment" href="#">ДЛЯ СТРОЙКИ</a>
+            </div>            
             <div class="slider">
                 <div class="perforator">
                     <img src="img/perforator.jpg" width="620" height="266" alt="Перфоратор">
@@ -71,27 +72,36 @@
                     <h3>Дрели</h3>
                     <p>Соседям на радость!</p>
                     <img src="img/slider-indicator.png" width="6" height="6">
-                </div>                                               
-                <img src="img/icon-left.svg" width="22" height="40">
+                </div>
+                <div class="left-to">
+                    <img src="img/icon-left.svg" width="22" height="40">
+                </div>
+                
                 <img src="img/icon-right.svg" width="22" height="40">
-                <a class="btn-canalog" href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
+                <div class="btn-canalog">ОТКРЫТЬ КАТАЛОГ</div>
                 <img src="img/slider-dots-copy-2.png" width="10" height="10">
-            </div>
-            <div class="assortment-discounts">
-                <h3>Скидки 50%</h3>
-                <a class="btn-assortment" href="#">НА 350 ТОВАРОВ</a>
-            </div>
-            <div class="assortment-delivery">
-                <h3>Доставка</h3>
-                <a class="btn-assortment" href="#">БЕСПЛАТНО</a>
+            </div>            
+            <div class="services">
+                <div class="assortment-discounts">
+                    <h3>Скидки 50%</h3>
+                    <a class="btn-assortment" href="#">НА 350 ТОВАРОВ</a>
+                </div>
+                <div class="assortment-delivery">
+                    <h3>Доставка</h3>
+                    <a class="btn-assortment" href="#">БЕСПЛАТНО</a>
+                </div>
             </div>
         </section>
         
             <h2>ПОПУЛЯРНЫЕ ТОВАРЫ</h2>            
-            <a class="btn-popular" href="#">ВСЕ ПОПУЛЯРНЫЕ ТОВАРЫ</a>
+        <div class="btn-popular">ВСЕ ПОПУЛЯРНЫЕ ТОВАРЫ</div>
         
         <section class="popular-product">            
             <div class="product">
+                <div class="actions">
+                    <a href="#" class="buy">Купить</a>
+                    <a href="#" class="bookmark">В закладки</a>
+                </div>
                 <div class="image">
                     <img src="img/BFG9000.jpg" width="180" height="160" alt="Перфоратор BOSCH BFG 9000">
                 </div>
@@ -99,7 +109,11 @@
                 <div class="discount">32500 Р.</div>            
                 <div class="price">25500 Р.</div>
             </div>
-            <div class="product">                
+            <div class="product">
+                <div class="actions">
+                    <a href="#" class="buy">Купить</a>
+                    <a href="#" class="bookmark">В закладки</a>
+                </div>
                 <div class="image">
                     <img src="img/BFG3000.jpg" width="180" height="160" alt="Перфоратор BOSCH BFG 3000">
                 </div>
@@ -107,7 +121,11 @@
                 <div class="discount">22500 Р.</div>             
                 <div class="price">15500 Р.</div>
             </div>
-            <div class="product">                              
+            <div class="product"> 
+                <div class="actions">
+                    <a href="#" class="buy">Купить</a>
+                    <a href="#" class="bookmark">В закладки</a>
+                </div>
                 <div class="image">
                     <img src="img/BFG6000.jpg" width="180" height="160" alt="Перфоратор BOSCH BFG 6000">
                 </div>
@@ -116,28 +134,49 @@
                 <div class="price">25500 Р.</div>
             </div>
             <div class="product">
+                <div class="actions">
+                    <a href="#" class="buy">Купить</a>
+                    <a href="#" class="bookmark">В закладки</a>
+                </div>
                 <div class="flag flag-new">новинка</div>                
                 <div class="image">
                     <img src="img/BFG2000.jpg" width="180" height="160" alt="Перфоратор BOSCH BFG 2000">
                 </div>
                 <div class="title">Перфоратор BOSCH BFG 2000</div>
+                <div class="discount">.</div>
                 <div class="price">12500 Р.</div>                                              
             </div>
         </section>
         
         <section class="popular-manufacturer">
             <h2>ПОПУЛЯРНЫЕ ПРОИЗВОДИТЕЛИ</h2>            
-            <a class="btn-popular" href="#">ВСЕ ПРОИЗВОДИТЕЛИ</a>
-            <ul class="manufacturer">
-                <li><img src="img/bosch.jpg" width="126" height="37" alt="BOSCH"></li>
-                <li><img src="img/Makita.jpg" width="123" height="40" alt="makita"></li>
-                <li><img src="img/dewalt.jpg" width="146" height="44" alt="dewalt"></li>
-                <li><img src="img/interscol.jpg" width="200" height="88" alt="ИНТЕРКОЛ"></li>
-                <li><img src="img/Hitachi.jpg" width="169" height="31" alt="HITACHI"></li>
-                <li><img src="img/LG.jpg" width="121" height="73" alt="LG"></li>
-                <li><img src="img/AEG.jpg" width="151" height="96" alt="AEG POWER SOLUTIONS"></li>
-                <li><img src="img/Metabo.jpg" width="204" height="69" alt="metabbo work. don't play."></li>
-            </ul>                                   
+            <div class="btn-popular">ВСЕ ПРОИЗВОДИТЕЛИ</div>
+            <div class="manufacturer">
+                <div class="manufactur">
+                    <img src="img/bosch.jpg" width="126" height="37" alt="BOSCH">
+                </div>
+                <div class="manufactur">
+                    <img src="img/Makita.jpg" width="123" height="40" alt="makita">
+                </div>
+                <div class="manufactur">
+                    <img src="img/dewalt.jpg" width="146" height="44" alt="dewalt">
+                </div>
+                <div class="manufactur">
+                    <img src="img/interscol.jpg" width="200" height="88" alt="ИНТЕРКОЛ">
+                </div>
+                <div class="manufactur">
+                    <img src="img/Hitachi.jpg" width="169" height="31" alt="HITACHI">
+                </div>
+                <div class="manufactur">
+                    <img src="img/LG.jpg" width="121" height="73" alt="LG">
+                </div>
+                <div class="manufactur">
+                    <img src="img/AEG.jpg" width="151" height="96" alt="AEG POWER SOLUTIONS">
+                </div>
+                <div class="manufactur">
+                    <img src="img/Metabo.jpg" width="204" height="69" alt="metabbo work. don't play.">
+                </div>
+            </div>                                   
         </section>
         
         <section class="service">
