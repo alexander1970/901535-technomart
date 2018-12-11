@@ -92,7 +92,13 @@ input[type="radio"].visually-hidden {
 } 
 
 .btn-basket {
-    padding-right: 31px;
+    padding-right: 31px;    
+}
+
+.catalog-basket {
+    background-color: rgb(238, 54, 67);        
+    width: 150px;          
+    padding: 11px 31px 12px 22px; /* верх право низ лево */  
 }
 
 .btn-search img {
@@ -101,17 +107,15 @@ input[type="radio"].visually-hidden {
 
 .btn-search img,
 .btn-bookmarks img,
-.btn-basket img {
+.btn-basket img,
+.catalog-basket img {
     margin-right: 14px;
 }
 
 .btn-order {
     background-color: #63a63e;
-    width: 150px;   
-    padding-left: 22px;
-    padding-right: 22px;  
-    padding-top: 11px;
-    padding-bottom: 12px;
+    width: 150px;      
+    padding: 11px 22px 12px 22px;    
 }
 
 .site-navigation,
@@ -171,15 +175,16 @@ input[type="radio"].visually-hidden {
     width: 195px;    
 }
 
-.tel {
+.tel {    
     font-size: 18px;
     line-height: 23px;
     color: red;
     width: 200px;
-    height: 30px;
+    height: 45px;
+    
     border: 5px solid #ffffff;
-    padding-top: 10px;
-    padding-left: 15px;    
+/*    padding-top: 10px;
+    padding-left: 15px;    */
 }
 
 .shop-navigation {
@@ -220,8 +225,8 @@ input[type="radio"].visually-hidden {
     top: 23px;
     left: 24px;
     
-    width: 16px;
-    height: 18px;
+    width: 20px;
+    height: 17px;
     
     background-image: url("../img/icon-login.svg");
     background-repeat: no-repeat;
@@ -246,6 +251,19 @@ input[type="radio"].visually-hidden {
 .user-ravshan a {
     color: #000000;
     text-decoration: underline;
+}
+
+.ravshan {
+    width: 300px;
+    height: 45px;
+    background-color: #ffffff;
+    border: 0;
+    margin-right: 0;
+    margin-bottom: 10px;
+}
+
+.ravshan img {
+    
 }
 
 .container {    
