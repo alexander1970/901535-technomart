@@ -1,12 +1,12 @@
 body {
-    min-width: 960px;
+    min-width: 940px;
     margin: 0;
     padding: 0;
 
     font-family: 'Cuprum', sans-serif;
-    font-size: 14px;
-    line-height: 18px;
-    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
     color: #000000;
     text-transform: uppercase;      
 }
@@ -75,7 +75,7 @@ input[type="radio"].visually-hidden {
     line-height: 24px;
     color: #ffffff;
     align-items: center;
-    background-color: red;
+    background-color: rgb(238, 54, 67);
     width: 165px;
     height: 36px;
     padding-left: 55px;
@@ -83,13 +83,71 @@ input[type="radio"].visually-hidden {
     border-bottom: 9px solid #b52933;
 }
 
-.btn-search {    
+.logo:hover {
+    background-color: rgb(202, 44, 55);
+}
+
+.logo:active {
+    background-color: rgb(186, 39, 50);
+}
+
+.site-navigation .btn-search { 
+    position: relative;
+    padding-left: 50px;
     padding-right: 197px;
 }
 
-.btn-bookmarks {
+.btn-search::before {
+    content: "";
+    
+    position: absolute;
+    top: 3px;
+    left: 17px;
+    
+    width: 17px;
+    height: 17px;
+    
+    background-image: url("../img/icon-search.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    
+    opacity: 0.3;
+}
+
+.btn-search:hover::before,
+.btn-search:focus::before,
+.btn-search:active::before {
+    opacity: 1;
+}
+
+.site-navigation .btn-bookmarks {
+    position: relative;
+    padding-left: 47px;
     padding-right: 47px;
-} 
+}
+
+.btn-bookmarks::before {
+    content: "";
+    
+    position: absolute;
+    top: 3px;
+    left: 17px;
+    
+    width: 14px;
+    height: 16px;
+    
+    background-image: url("../img/icon-bookmark.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    
+    opacity: 0.3;
+}
+
+.btn-bookmarks:hover::before,
+.btn-bookmarks:focus::before,
+.btn-bookmarks:active::before {
+    opacity: 1;
+}
 
 .btn-basket {
     padding-right: 31px;    
@@ -101,11 +159,6 @@ input[type="radio"].visually-hidden {
     padding: 11px 31px 12px 22px; /* верх право низ лево */  
 }
 
-.btn-search img {
-    padding-left: 17;
-}
-
-.btn-search img,
 .btn-bookmarks img,
 .btn-basket img,
 .catalog-basket img {
@@ -267,9 +320,13 @@ input[type="radio"].visually-hidden {
 }
 
 .container {    
-    width: 960px;
+    width: 940px;
     margin: 0 auto;
     margin-top: 60px;
+    padding: 0;
+    
+ /*   background: rgba(0, 128, 0, 0.2);
+    box-shadow: 0 0 0 3px green;  */
 }
 
 .assortment {
@@ -300,10 +357,35 @@ input[type="radio"].visually-hidden {
     background:url("../img/new-flag.png") no-repeat 0 0;
 }
 ----------------------------------------*/
-.assortment-instruments {
+
+.btn-assortment {
+    display: block;
+    width: 125px;
+    height: 300;
+    padding: 13px 0;
+    margin-left: 25px;
+    margin-bottom: 25px;
+  
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  
+  background-color: rgb(229, 172, 64);
+  border-radius: 3px;
+  border: none;
+}
+
+.assortment-instruments {    
     background-color: #38bce3;
     width: 300px;
     margin-bottom: 20px;
+}
+
+.assortment-instruments .btn-assortment {
+    background-color: rgb(53, 169, 204);
 }
 
 .assortment-equipment {    
@@ -311,6 +393,162 @@ input[type="radio"].visually-hidden {
     width: 300px;
     margin-bottom: 20px;
 }
+
+.assortment-equipment .btn-assortment {
+    background-color: rgb(198, 130, 194);
+}
+/* ----------- Слайды --------------------- */
+.slider-container {
+    position: relative;
+    width: 620px;
+    height: 266px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slider-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+}
+
+.slider-controls {
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+  z-index: 100;
+  
+  width: 160px;
+  height: 18px;
+
+  text-align: center;
+  font-size: 0;
+  transform: translateX(-50%);
+}
+
+.slider-controls label {
+  position: relative;
+  
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-controls label::after {
+  content: "";
+  
+  position: absolute;
+  top: 9px;
+  left: 3px;
+  z-index: 1;
+  
+  width: 12px;
+  height: 12px;
+  
+  background: #ffffff;
+  
+  border-radius: 50%;
+}
+
+.slider-list {
+  margin: 0;
+  padding: 0;
+  
+  list-style: none;
+}
+
+.slider-item {
+  display: none;
+  padding: 78px 0 80px 0;
+}
+
+.slider-item:nth-child(1) {
+  background-image: url("../img/perforator.jpg");
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+
+.slider-item:nth-child(2) {
+  background-image: url("../img/dreli.jpg");
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+
+#product-1:checked ~ .slider-list .slider-item:nth-child(1) {
+  display: block;
+}
+
+#product-2:checked ~ .slider-list .slider-item:nth-child(2) {
+  display: block;
+}
+
+#product-1:checked ~ .slider-controls .slider-controls-item--1::before,
+#product-2:checked ~ .slider-controls .slider-controls-item--2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  z-index: 2;
+  width: 4px;
+  height: 4px;
+  margin: -4px;
+  background-color: #ff0000;
+  border:  2px solid #ff0000;
+  border-radius: 50%;
+}
+
+.slider-item h3 {
+  max-width: 100px;
+  margin-left: 25px;
+  margin-bottom: 27px;
+  
+  font-size: 26px;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+.slider-item p {
+  max-width: 430px;
+  margin-left: 25px;
+  margin-bottom: 38px;
+}
+
+.button {
+  display: block;
+  width: 195px;
+  padding: 13px 0;
+    margin-left: 25px;
+    margin-bottom: 25px;
+  
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  
+  background-color: #fb565a;
+  border-radius: 3px;
+  border: none;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #e74246;
+}
+
+.button:active {
+  background-color: #d7373b;
+  color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
+}
+/* -------------- конец слайдам ---------------*/
 
 .services {       
     flex-direction: column;
@@ -321,7 +559,11 @@ input[type="radio"].visually-hidden {
     background-color: #8ed78f;
     width: 300px;
     height: 123px;
-    margin-bottom: 20px;
+    margin: 0;
+}
+
+.assortment-discounts .btn-assortment {
+    background-color: rgb(128, 193, 128);
 }
 
 .assortment-delivery {
@@ -387,39 +629,6 @@ input[type="radio"].visually-hidden {
 .assortment h3 {
     font-size: 24px;
     line-height: 30px;
-}
-
-.perforator {
-    display: none;
-}
-
-.perforator h3,
-.drel h3 {
-    
-    position: absolute;
-    top: 550px;
-    
-    font-size: 36px;
-    line-height: 36px;    
-}
-
-.perforator p,
-.drel p {
-    position: absolute;
-    top: 600px;
-    font-size: 18px;
-    line-height: 24px;
-}
-
-.btn-canalog {
-    position: absolute;
-    top: 650;
-    box-sizing: border-box;
-    background: url("../img/slider-btn.png") no-repeat #ffffff;
-    width: 195px;
-    height: 38px;  
-    font-size: 14px;
-    line-height: 38px;
 }
 
 h2 {

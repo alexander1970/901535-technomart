@@ -13,8 +13,8 @@
         <nav class="main-navigation">            
             <ul class="site-navigation">
                 <li><div class="logo">ТЕХНОМАРТ</div></li>
-                <li><a class="btn-search" href="#"><img src="img/icon-search.svg" width="17" height="17">Поиск:</a></li>
-                <li><a class="btn-bookmarks" href="#"><img src="img/icon-bookmark.svg" width="14" height="16">Закладки: 0</a></li>
+                <li><a class="btn-search" href="#">Поиск:</a></li>
+                <li><a class="btn-bookmarks" href="#">Закладки: 0</a></li>
                 <li><a class="btn-basket" href="#"><img src="img/icon-cart.svg" width="15" height="15">Корзина: 0</a></li>
                 <li><a class="btn-order" href="#">Оформить заказ</a></li>
             </ul>
@@ -49,8 +49,9 @@
         <section class="assortment">
             <div class="assortment-materials">
                 <div class="flag flag-new">новинка</div>  
-                <h3>Материалы</h3>
-                <a class="btn-assortment" href="#">НА ЛЮБОЙ ВКУС</a>       
+                <h3>Материалы</h3>              
+                <!-- <img src="img/icon-1.svg" width="44" height="65">-->
+                <a class="btn-assortment" href="#">НА ЛЮБОЙ ВКУС</a>                       
             </div>         
             <div class="assortment-instruments">
                 <h3>Инструменты</h3>
@@ -59,28 +60,29 @@
             <div class="assortment-equipment">
                 <h3>Техника</h3>
                 <a class="btn-assortment" href="#">ДЛЯ СТРОЙКИ</a>
-            </div>            
-            <div class="slider">
-                <div class="perforator">
-                    <img src="img/perforator.jpg" width="620" height="266" alt="Перфоратор">
-                    <h3>ПЕРФОРАТОРЫ</h3>
-                    <p>Настоящие мужские игрушки</p>
-                    <img src="img/slider-indicator.png" width="6" height="6">
+            </div>                      
+            <div class="slider-container">        
+                <input class="slider-visually-hidden" type="radio" id="product-1" name="toggle">
+                <input class="slider-visually-hidden" type="radio" id="product-2" name="toggle" checked>        
+                <div class="slider-controls">
+                    <label class="slider-controls-item slider-controls-item--1" for="product-1"></label>
+                    <label class="slider-controls-item slider-controls-item--2" for="product-2"></label>  
+                    <!--<img src="img/icon-right.svg" width="22" height="40">
+                    <img src="img/icon-left.svg" width="22" height="40">-->
                 </div>
-                <div class="drel">
-                    <img src="img/dreli.jpg" width="620" height="266" alt="Дрель">
-                    <h3>Дрели</h3>
-                    <p>Соседям на радость!</p>
-                    <img src="img/slider-indicator.png" width="6" height="6">
-                </div>
-                <div class="left-to">
-                    <img src="img/icon-left.svg" width="22" height="40">
-                </div>
-                
-                <img src="img/icon-right.svg" width="22" height="40">
-                <div class="btn-canalog">ОТКРЫТЬ КАТАЛОГ</div>
-                <img src="img/slider-dots-copy-2.png" width="10" height="10">
-            </div>            
+                <ul class="slider-list">
+                    <li class="slider-item">
+                        <h3>ПЕРФОРАТОРЫ</h3>
+                        <p>Настоящие мужские игрушки</p>                        
+                        <a class="slider-item-button button" href="#">ОТКРЫТЬ КАТАЛОГ</a>
+                    </li>
+                    <li class="slider-item">
+                        <h3>Дрели</h3>
+                        <p>Соседям на радость!</p>                        
+                        <a class="slider-item-button button" href="#">ОТКРЫТЬ КАТАЛОГ</a>
+                    </li>          
+                </ul>  
+            </div>
             <div class="services">
                 <div class="assortment-discounts">
                     <h3>Скидки 50%</h3>
@@ -93,8 +95,10 @@
             </div>
         </section>
         
+        <section class="headline">
             <h2>ПОПУЛЯРНЫЕ ТОВАРЫ</h2>            
-        <div class="btn-popular">ВСЕ ПОПУЛЯРНЫЕ ТОВАРЫ</div>
+            <div class="button">ВСЕ ПОПУЛЯРНЫЕ ТОВАРЫ</div>
+        </section>
         
         <section class="popular-product">            
             <div class="product">
