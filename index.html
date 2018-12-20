@@ -300,12 +300,34 @@
             <button class="button" type="submit">Войти</button>
         </form>
         <button class="modal-close" type="button">Закрыть</button>
-    </section>
-    
-    <section class="modal modal-map">
-        <h2 class="visually-hidden">Как до нас добраться</h2>
+    </section>       
+      
+      <section class="modal modal-letter">
+          <form class="letter-form" action="http://echo.htmlacademy.ru" method="post">
+              <div class="letter-adress">
+                <p class="letter-item">
+                    <label class="visually-hidden" for="user-name">Ваше имя:</label>
+                    <input class="name-icon-user" type="text" id="user-name" name="user-name" placeholder="Имя фамилия">
+                </p>
+                <p class="letter-item">
+                    <label class="visually-hidden" for="user-email">Ваш e-mail:</label>
+                    <input class="email-icon-user" type="text" id="user-email" name="user-email" placeholder="email@example.com">
+                </p>              
+                <p class="letter-item">
+                    <label class="visually-hidden" for="user-letter">Текст письма</label>
+                    <textarea class="letter-icon-user" rows="5" cols="90" id="user-letter" name="user-letter">В свободной форме</textarea>                  
+                </p>
+             </div>
+              <p class="letter-button">
+                  <button class="button" type="submit">Отправить</button>
+              </p>              
+          </form>
+          <button class="modal-close" type="button">Закрыть</button>
+      </section>
+      
+      <section class="modal modal-map">        
         <p>
-            <img src="img/map.jpg" width="300" height="158" alt="Офис компани по адресу ул. Б Конюшенная 19/8, Санкт-Петербург">
+            <img src="img/map1.jpg" width="1736" height="779" alt="Офис компани по адресу ул. Б Конюшенная 19/8, Санкт-Петербург">
         </p>
         <button class="modal-close" type="button">Закрыть</button>
     </section>
