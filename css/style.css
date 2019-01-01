@@ -2,9 +2,8 @@ body {
     min-width: 940px;
     margin: 0;
     padding: 0;
-
     font-family: 'Cuprum', sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 24px;
     font-weight: 400;
     color: #000000;          
@@ -18,6 +17,21 @@ a {
 img {
     max-width: 100%;
     height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .main-header {
@@ -170,7 +184,6 @@ img {
 .shop-navigation,
 .manufacturer,
 .menu-service,
-.menu-company,
 .category-nav,
 .box-filter,
 .radio-filter {    
@@ -208,10 +221,7 @@ img {
     width: 940px;
     height: 130px;
     font-size: 10px;
-    line-height: 15px; 
-    /*
-    background: rgba(0, 128, 0, 0.2);
-    box-shadow: 0 0 0 3px green;*/
+    line-height: 15px;     
 }
 
 .coordinate h1 {
@@ -225,9 +235,8 @@ img {
     padding-left: 20px;
 }
 
-.adress {    
+.coordinate p {
     font-size: 14px;
-    line-height: 23px;
 }
 
 .tel {    
@@ -902,7 +911,7 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgb(244, 248, 250);    
+    background-color: rgb(244, 248, 250); 
     width: 100%;
     padding-top: 70px;
     padding-bottom: 80px;
@@ -936,8 +945,7 @@ h2 {
     margin-left: 80px;
 }
 
-.service .delivery p,
-.menu-company {
+.service .delivery p {
     font-size: 14px;
     line-height: 24px;
     margin-top: 15px;
@@ -949,15 +957,12 @@ h2 {
 }
 
 .delivery::before {
-    content: "";
-    
+    content: "";    
     position: absolute;
     top: 45px;
-    left: 225px;
-        
+    left: 225px;        
     width: 468px;
-    height: 261px;
-    
+    height: 261px;    
     background-image: url("../img/dostavka.png");
     background-repeat: no-repeat;
     background-position: 0 0;    
@@ -979,6 +984,51 @@ h2 {
     padding-top: 80px;
 }
 
+.company h2 {
+    margin-bottom: 20px;
+}
+
+.company p {
+    margin-bottom: 20px;
+}
+
+.about-us {
+    width: 520px;
+}
+
+.menu-company li {
+    position: relative;
+    list-style: none; 
+    font-size: 20px;
+    line-height: 40px;
+    margin-left: 0;
+}
+
+.menu-company li::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    top: 18px;
+    left: -40px;
+    background-color: red;
+}
+
+.contact {
+    margin-left: 117px;
+}
+
+.contact img {
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+
+.contact .button {
+    width: 300px;
+    margin-left: 0;
+    margin-bottom: 80px;
+}
+
 .main-footer {
     display: flex;
     flex-direction: column;
@@ -991,11 +1041,51 @@ h2 {
 .footer-social {    
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    width: 100%
+    justify-content: space-between;
+    width: 940px;
+    margin: 0 auto;
+    padding-top: 35px;
 }
 
-.category-nav,
+.footer-social ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 141px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background-color: rgb(33, 42, 58);
+}
+
+.social-btn:hover,
+.social-btn:focus {
+    background-color: rgb(238, 54, 67);
+}
+
+.category-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -100px;
+    margin-bottom: 60px;
+}
+
+.category-nav p {
+    margin: 0;
+    padding: 0;
+}
+
+.category-nav a,
 .footer-social a {
     color: #ffd180;
 }
