@@ -237,26 +237,25 @@ input[type="radio"].visually-hidden {
 .coordinate p {
     font-size: 14px;
     color: #32425c;
+    margin-left: 70px;
 }
 
 .tel {    
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 23px;
     color: red;
     width: 260px;
     height: 40px;
-    margin-top: 10px;
-    margin-left: 10;
+    margin: 30px 0 0 50px;    
     padding: 0;
     border: 5px solid #ffffff;
 }
 
 .tel img {
-    margin-left: 10px;
-    margin-right: 80px;
+    margin: 0 50px 0 10px;    
 }
 
 .shop-navigation {
@@ -426,6 +425,33 @@ input[type="radio"].visually-hidden {
 .assortment-equipment .btn-assortment {
     background-color: rgb(198, 130, 194);
 }
+
+.button {
+    display: block;
+    width: 195px;
+    padding: 13px 0;
+    margin: 0 25px;    
+    font-size: 14px;
+    line-height: 18px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;  
+    background-color: #fb565a;
+    border-radius: 3px;
+    border: none;
+}
+
+.button:hover,
+.button:focus {
+    background-color: #e74246;
+}
+
+.button:active {
+    background-color: #d7373b;
+    color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
+}
 /* ----------- Слайды --------------------- */
 .slider-container {
     position: relative;
@@ -486,10 +512,9 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-list {
-  margin: 0;
-  padding: 0;
-  
-  list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .slider-item {
@@ -509,10 +534,7 @@ input[type="radio"].visually-hidden {
   background-position: 100% 0;
 }
 
-#product-1:checked ~ .slider-list .slider-item:nth-child(1) {
-  display: block;
-}
-
+#product-1:checked ~ .slider-list .slider-item:nth-child(1), 
 #product-2:checked ~ .slider-list .slider-item:nth-child(2) {
   display: block;
 }
@@ -532,51 +554,22 @@ input[type="radio"].visually-hidden {
   border-radius: 50%;
 }
 
-.slider-item h3 {
-  max-width: 100px;
-  margin-left: 25px;   
-  font-size: 120px;
-  line-height: 150px;
-  font-weight: 500;
+.slider-list .slider-item h3 {    
+    max-width: 100px;
+    margin: -20px 0 0 25px;     
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 500;
 }
 
-.slider-item p {
-  max-width: 430px;
-  margin-left: 25px;
-  margin-bottom: 38px;
+.slider-list .slider-item p {
+    max-width: 430px;
+    margin: 0 0 120px 25px; 
+    font-size: 18px;
+    line-height: 24px;
 }
 
-.button {
-  display: block;
-  width: 195px;
-  padding: 13px 0;
-    margin-left: 25px;
-    margin-bottom: 25px;
-  
-  font-size: 14px;
-  line-height: 18px;
-  color: #ffffff;
-  text-transform: uppercase;
-  text-align: center;
-  text-decoration: none;
-  
-  background-color: #fb565a;
-  border-radius: 3px;
-  border: none;
-}
-
-.button:hover,
-.button:focus {
-  background-color: #e74246;
-}
-
-.button:active {
-  background-color: #d7373b;
-  color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
-}
 /* -------------- конец слайдам ---------------*/
-
 .services {       
     flex-direction: column;
     justify-content: flex-start;
@@ -771,6 +764,10 @@ h2 {
 
 .breadcrumbs-current::after {
     display: none;
+}
+
+.page-title {
+    margin: 25px;    
 }
 
 .the-choice {
@@ -1018,15 +1015,22 @@ h2 {
 }
 
 .filters {
-    width: 220px;
-    height: 660px;
+    width: 220px;    
+    margin: 10px 0;
+    
+    background: rgba(0, 128, 0, 0.2);
+    box-shadow: 0 0 0 3px green;
+}
+
+.filters h3 {
+    font-size: 13px;
+    margin: 25px 20px;
 }
 
 .filter fieldset {
     padding: 0;
     margin: 0;
-    margin-bottom: 30px;
-    
+    margin-bottom: 30px;    
     border: none;
 }
 
@@ -1034,11 +1038,11 @@ h2 {
     margin-bottom: 35px;
 }
 
-.filter legend {
-  margin-bottom: 26px;
-  
-  font-size: 15px;
-  line-height: 20px;
+.filters legend {
+    margin: -20px 0 26px 0;  
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 400;
 }
 
 .filter ul {
@@ -1226,7 +1230,6 @@ h2 {
 .pagination-item-current a:focus,
 .pagination-item-current a:active {
   color: #000000;
-
   background-color: #ffffff;
 }
 
@@ -1237,6 +1240,11 @@ h2 {
     font-size: 18px;
     line-height: 24px;
     color: #ffffff; 
+}
+
+.footer-bottom {
+    width: 100%;
+    background-color: rgb(41, 52, 73);
 }
 
 .footer-social {    
