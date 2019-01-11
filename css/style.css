@@ -472,7 +472,7 @@ input[type="radio"].visually-hidden {
 .slider-controls {
   position: absolute;
   left: 50%;
-  bottom: 25px;
+  bottom: 40px;
   z-index: 100;
   
   width: 160px;
@@ -484,31 +484,51 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-controls label {
-  position: relative;
-  
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  padding: 0;
-  
-  border-radius: 50%;
-  cursor: pointer;
+    position: relative;  
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    padding: 0;  
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .slider-controls label::after {
-  content: "";
-  
-  position: absolute;
-  top: 9px;
-  left: 3px;
-  z-index: 1;
-  
-  width: 12px;
-  height: 12px;
-  
-  background: #ffffff;
-  
-  border-radius: 50%;
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 3px;
+    z-index: 1;
+    width: 12px;
+    height: 12px;
+    background: #ffffff;
+    border-radius: 50%;
+}
+
+.icon-left {
+    content: "";
+    position: absolute;
+    top: -95px;
+    left: -265px;
+    width: 22px;
+    height: 40px;
+    z-index: 3;
+    background-image: url("../img/icon-left.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0; 
+}
+
+.icon-right {
+    content: "";
+    position: absolute;
+    top: -95px;
+    right: -265px;
+    width: 22px;
+    height: 40px;
+    z-index: 3;
+    background-image: url("../img/icon-right.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0; 
 }
 
 .slider-list {
@@ -663,7 +683,7 @@ input[type="radio"].visually-hidden {
     justify-content: space-between;  
     height: 30px;
     margin: 30px 0;
-    padding: 25px;    
+    padding: 25px 0 25px 25px;    
     background-color: rgb(249, 245, 240);
 }
 
@@ -673,7 +693,8 @@ input[type="radio"].visually-hidden {
 
 .popular-button {
     width: 235px;
-    height: 15px;   
+    height: 15px;
+    margin: 0 25px;
     padding: 10px;
 }
 
@@ -948,12 +969,14 @@ h2 {
     margin-right: 0;
 }
 
+.service-fon {    
+    background-color: rgb(244, 248, 250);     
+}
+
 .service {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background-color: rgb(244, 248, 250); 
-    width: 100%;
+    justify-content: center;    
     padding-top: 70px;
     padding-bottom: 80px;
 }
@@ -1018,8 +1041,8 @@ h2 {
     width: 220px;    
     margin: 10px 0;
     
-    background: rgba(0, 128, 0, 0.2);
-    box-shadow: 0 0 0 3px green;
+  /*  background: rgba(0, 128, 0, 0.2);
+    box-shadow: 0 0 0 3px green; */
 }
 
 .filters h3 {
@@ -1034,6 +1057,17 @@ h2 {
     border: none;
 }
 
+.filter-item {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;    
+    border: none;
+}
+
+.range-filter {
+    margin-top: -10px;
+}
+
 .filter fieldset:first-child {
     margin-bottom: 35px;
 }
@@ -1042,7 +1076,89 @@ h2 {
     margin: -20px 0 26px 0;  
     font-size: 17px;
     line-height: 20px;
-    font-weight: 400;
+    font-weight: 700;
+}
+
+.range-controls {
+    position: relative;
+    height: 41px;
+    margin-bottom: 15px;
+    padding-top: 39px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+.range-controls .scale {
+    height: 2px;
+    background: #d7dcde;
+}
+
+.range-controls .bar {
+    width: 80%;
+    height: 2px;
+    background: #00ca74;
+}
+
+.range-controls .toggle {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    padding: 0;
+    border: 8px solid #ffffff;
+    background-color: #ababab;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.range-controls .toggle-min {
+    left: 0px;
+}
+
+.range-controls .toggle-max {
+    left: 160px;
+}
+
+.price-controls {
+    position: relative;
+    font-size: 0;
+}
+
+.price-controls label {    
+    display: inline-block;
+    width: 50%;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.price-controls input {
+    width: 70px;
+    padding: 8px 15px;
+    margin-top: -3px;
+    font-family: "RT Sans", Arial, sans-serif;
+    font-size: 17px;
+    text-align: center;
+    color: #283136;
+    border: none;
+    border-radius: 5px;
+    background: #f1f1f1;
+}
+
+.tire {
+    position: absolute;
+    top: 14px;
+    left: 105px;
+    width: 10px;
+    height: 1px;
+    background-color: #000000;
+}
+
+.max-price {
+    text-align: right;
 }
 
 .filter ul {
@@ -1243,7 +1359,7 @@ h2 {
 }
 
 .footer-bottom {
-    width: 100%;
+    width: 100%;    
     background-color: rgb(41, 52, 73);
 }
 
@@ -1253,7 +1369,7 @@ h2 {
     justify-content: space-between;
     width: 940px;
     margin: 0 auto;
-    padding-top: 35px;
+    padding-top: 20px;
 }
 
 .footer-social ul {
@@ -1297,6 +1413,10 @@ h2 {
 .category-nav a,
 .footer-social a {
     color: #ffd180;
+}
+
+.obratna-svaz {
+    margin-right: 40px;
 }
 
 /* Всплывающая форма */
