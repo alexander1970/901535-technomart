@@ -999,7 +999,17 @@ h2 {
     font-size: 21px;
     line-height: 30px;
     color: #ffffff; 
-    margin-left: -40px;
+    margin-left: -40px;    
+}
+
+.btn-service-active {
+    width: 240px;
+    height: 65px;
+    background-color: #ffffff;
+    font-size: 21px;
+    line-height: 30px;
+    color: #32425c; 
+    margin-left: -40px;    
 }
 
 .service h3 {
